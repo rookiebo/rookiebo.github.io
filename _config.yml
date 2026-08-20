@@ -1,0 +1,66 @@
+# ============================================
+# 站点基本信息（请修改为您自己的信息）
+# ============================================
+title: Bangor的个人博客                    # 网站标题
+description: >-                       # 网站描述（用于 SEO 与订阅源）
+  记录技术学习、生活感悟与项目实践的个人博客。
+url: "https://rookiebo.github.io"    # 完整网站地址（用户站点示例）
+baseurl: ""                           # 用户站点留空；项目站点填写 "/仓库名"
+lang: zh-CN                           # 语言
+
+# 作者信息
+author:
+  name: Bangor
+  email: yuzhibo992@gmail.com       # 可选
+
+# ============================================
+# 构建与输出设置
+# ============================================
+markdown: kramdown                    # Markdown 引擎（GitHub Pages 默认支持）
+highlighter: rouge                    # 代码高亮
+permalink: /:year/:month/:day/:title/ # 文章永久链接格式（可自定义）
+timezone: Asia/Shanghai               # 时区
+
+# 默认 Front Matter（减少每篇文章重复填写）
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"                  # 文章默认使用 post 布局
+      comments: false                 # 是否默认开启评论（需额外配置）
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"               # 普通页面默认布局
+
+# ============================================
+# 插件（GitHub Pages 白名单内的常用插件）
+# ============================================
+plugins:
+  - jekyll-feed                       # 生成 RSS/Atom 订阅源
+  - jekyll-seo-tag                    # SEO 优化标签
+  - jekyll-sitemap                    # 自动生成 sitemap.xml
+
+# ============================================
+# 排除文件（不参与构建）
+# ============================================
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - .gitignore
+
+# ============================================
+# 其他常用设置（可选）
+# ============================================
+# 分页（需要 jekyll-paginate 插件，GitHub Pages 支持有限，可后续添加）
+# paginate: 10
+# paginate_path: "/page:num/"
+
+# 社交媒体（在模板中可调用）
+# twitter_username: your_twitter
+# github_username: your_github
