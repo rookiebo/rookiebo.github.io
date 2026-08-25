@@ -1,3 +1,6 @@
+---
+layout: none
+---
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -11,12 +14,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 </head>
 
 <body id="top">
-  <header class="site-header"><a class="brand" href="index.html" aria-label="Bangor 的个人博客首页">B.</a>
-    <nav aria-label="主导航"><a class="active" href="index.html">首页</a><a href="#articles">文章</a><a
+  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}" aria-label="Bangor 的个人博客首页">B.</a>
+    <nav aria-label="主导航"><a class="active" href="{{ '/' | relative_url }}">首页</a><a href="#articles">文章</a><a
         href="https://github.com/rookiebo" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></nav>
   </header>
   <main>
@@ -37,9 +40,9 @@
         <div class="post-number">01</div>
         <div class="post-content">
           <div class="post-meta"><span>Python</span><time datetime="2026-08-21">2026.08.21</time></div>
-          <h3><a href="Posts/Python基础知识整理.html">Python 基础知识整理</a></h3>
+          <h3><a href="{{ '/python-basics/' | relative_url }}">Python 基础知识整理</a></h3>
           <p>从数据类型、字符串格式化与容器，到条件判断和函数参数：一份适合回顾 Python 核心概念的学习笔记。</p><a class="read-link"
-            href="Posts/Python基础知识整理.html">阅读全文 <span>→</span></a>
+            href="{{ '/python-basics/' | relative_url }}">阅读全文 <span>→</span></a>
         </div>
       </article>
     </section>
