@@ -2,28 +2,51 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bangor的博客</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bangor 的个人技术博客，记录学习、实践与思考。">
+  <title>Bangor 的个人博客</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header>
-        <h1>欢迎访问我的网站</h1>
-        <nav>
-            <a href="index.html">首页</a>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>主要内容</h2>
-            <p>在此编写页面正文内容。</p>
-        </section>
-    </main>
-    <footer>
-        <p>© 2026 Bangor</p>
-    </footer>
+<body id="top">
+  <header class="site-header"><a class="brand" href="index.html" aria-label="Bangor 的个人博客首页">B.</a>
+    <nav aria-label="主导航"><a class="active" href="index.html">首页</a><a href="#articles">文章</a><a
+        href="https://github.com/rookiebo" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow"><span></span> HELLO, WORLD</p>
+      <h1 id="hero-title">把学习的碎片，<br><em>写成前进的轨迹。</em></h1>
+      <p class="intro">这里是 Bangor 的个人技术博客，记录编程学习、项目实践和那些值得反复琢磨的日常思考。</p><a class="primary-link" href="#articles">阅读最新文章
+        <span>↓</span></a>
+    </section>
+    <section class="article-section" id="articles" aria-labelledby="articles-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> WRITING</p>
+          <h2 id="articles-title">最近文章</h2>
+        </div><span class="article-count">01 / 01</span>
+      </div>
+      <article class="post-card">
+        <div class="post-number">01</div>
+        <div class="post-content">
+          <div class="post-meta"><span>Python</span><time datetime="2026-08-21">2026.08.21</time></div>
+          <h3><a href="Posts/Python基础知识整理.html">Python 基础知识整理</a></h3>
+          <p>从数据类型、字符串格式化与容器，到条件判断和函数参数：一份适合回顾 Python 核心概念的学习笔记。</p><a class="read-link"
+            href="Posts/Python基础知识整理.html">阅读全文 <span>→</span></a>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>© 2026 Bangor. Built with curiosity.</p><a href="#top">BACK TO TOP ↑</a>
+  </footer>
 </body>
 
 </html>

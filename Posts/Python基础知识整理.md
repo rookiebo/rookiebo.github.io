@@ -1,4 +1,9 @@
-# Python基础
+---
+layout: post
+title: Python 基础知识整理
+description: 从数据类型到函数参数，梳理 Python 学习中最常用的核心概念。
+category: Python
+---
 
 ## 数据类型
 
