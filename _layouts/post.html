@@ -1,3 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="{{ page.description | default: site.description }}"><title>{{ page.title }} | {{ site.title }}</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="{{ '/style.css' | relative_url }}"></head>
-<body><header class="site-header"><a class="brand" href="{{ '/' | relative_url }}" aria-label="返回首页">B.</a><nav aria-label="主导航"><a href="{{ '/' | relative_url }}">首页</a><a href="{{ '/#articles' | relative_url }}">文章</a></nav></header><main class="post-page"><a class="back-link" href="{{ '/' | relative_url }}">← 返回文章列表</a><article class="article-body"><header class="article-header"><p class="eyebrow"><span></span> {{ page.category | default: 'PYTHON' }}</p><h1>{{ page.title }}</h1><p>{{ page.description }}</p></header>{{ content }}</article></main><footer><p>© 2026 Bangor. Built with curiosity.</p></footer></body></html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+
+<body>
+    <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}" aria-label="返回首页">B.</a>
+        <nav aria-label="主导航"><a href="{{ '/' | relative_url }}">首页</a><a
+                href="{{ '/#articles' | relative_url }}">文章</a></nav>
+    </header>
+    <main class="post-page"><a class="back-link" href="{{ '/' | relative_url }}">← 返回文章列表</a>
+        <article class="article-body">
+            <header class="article-header">
+                <p class="eyebrow"><span></span> {{ page.category | default: 'PYTHON' }}</p>
+                <h1>{{ page.title }}</h1>
+                <p>{{ page.description }}</p>
+            </header>{{ content }}
+        </article>
+    </main>
+    <footer>
+        <p>© 2026 Bangor. Built with curiosity.</p>
+    </footer>
+</body>
+
+</html>
