@@ -18,7 +18,7 @@ layout: none
 </head>
 
 <body id="top">
-  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}" aria-label="Bangor 的个人博客首页">B.</a>
+  <header class="site-header"><a class="brand" href="{{ '/' | relative_url }}" aria-label="Bangor 的个人博客首页"><img src="https://github.com/rookiebo.png?size=96" alt="Bangor 的 GitHub 头像"></a>
     <nav aria-label="主导航"><a class="active" href="{{ '/' | relative_url }}">首页</a><a href="#articles">文章</a><a
         href="https://github.com/rookiebo" target="_blank" rel="noreferrer">GitHub <span>↗</span></a></nav>
   </header>
@@ -33,27 +33,20 @@ layout: none
       <div class="section-heading">
         <div>
           <p class="eyebrow"><span></span> WRITING</p>
-          <h2 id="articles-title">最近文章</h2>
-        </div><span class="article-count">01 / 01</span>
+          <h2 id="articles-title">文章总览</h2>
+        </div><span class="article-count">01 / {% assign article_total = site.posts.size %}{% if article_total < 10 %}0{{ article_total }}{% else %}{{ article_total }}{% endif %}</span>
       </div>
+      {% for post in site.posts %}
       <article class="post-card">
-        <div class="post-number">01</div>
+        <div class="post-number">{% if forloop.index < 10 %}0{{ forloop.index }}{% else %}{{ forloop.index }}{% endif %}</div>
         <div class="post-content">
-          <div class="post-meta"><span>Python</span><time datetime="2026-08-21">2026.08.21</time></div>
-          <h3><a href="{{ '/python/Basics.html' | relative_url }}">Python 基础知识整理</a></h3>
-          <p>从数据类型、字符串格式化与容器，到条件判断和函数参数：一份适合回顾 Python 核心概念的学习笔记。</p><a class="read-link"
-            href="{{ '/python/Basics.html' | relative_url }}">阅读全文 <span>→</span></a>
+          <div class="post-meta"><span>{{ post.categories.first | default: 'Article' }}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time></div>
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.description | default: post.excerpt | strip_html | truncate: 120 }}</p>
+          <a class="read-link" href="{{ post.url | relative_url }}">阅读全文 <span>→</span></a>
         </div>
       </article>
-      <article class="post-card">
-        <div class="post-number">02</div>
-        <div class="post-content">
-          <div class="post-meta"><span>Python</span><time datetime="2026-08-21">2026.08.30</time></div>
-          <h3><a href="{{ '/python/AdvancedFeatures.html' | relative_url }}">Python 高级特性整理</a></h3>
-          <p>整理切片、迭代、列表生成式、生成器、迭代器</p><a class="read-link"
-            href="{{ '/python/AdvancedFeatures.html' | relative_url }}">阅读全文 <span>→</span></a>
-        </div>
-      </article>
+      {% endfor %}
     </section>
   </main>
   <footer>
